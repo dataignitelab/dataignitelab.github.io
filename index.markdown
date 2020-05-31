@@ -4,8 +4,26 @@
 
 layout: home
 ---
-<h3>제조 산업 IIoT 기술 관련</h3>
-<h4><a href = "https://blog.naver.com/dataignitelab" target="_sub">&nbsp; &nbsp; &nbsp; 블로그</a></h4>
-<h4><a href = "https://github.com/dataignitelab/WhaleShark_IIoT" target="_sub">&nbsp; &nbsp; &nbsp; 깃허브</a></h4>
-<h3>AI 기술 관련</h3>
-<h3>국가 RnD 관련</h3>
+<style>
+			div { text-align: center; }
+</style>
+<br><br>
+
+<div stype="float: center;">
+<h3>AI, Bigdata, IIoT Opensource Project</h3>
+</div>
+
+<br>
+<div stype="float: left;">
+<a href = "https://blog.naver.com/dataignitelab" target='sub'>&nbsp; IIoT 기술 소개 블로그</a>
+</div>
+
+<br>
+<div>
+<a href = "https://github.com/dataignitelab/WhaleShark_IIoT" target='sub'>&nbsp; IIoT 기술 소스 깃허브</a>
+</div>
+
+<br><br>
+<div>
+			<img src="whaleshark_area.png" alt="">
+</div>

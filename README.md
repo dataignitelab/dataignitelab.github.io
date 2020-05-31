@@ -78,11 +78,11 @@ TeXt use [Tomorrow](https://github.com/chriskempson/tomorrow-theme) as the highl
 
 ## Demo Pages
 
-| Name | Description |
-| --- | --- |
-| [Home](https://tianqi.name/jekyll-TeXt-theme/test/) | Home page |
-| [Archive](https://tianqi.name/jekyll-TeXt-theme/archive.html) | Archive page |
-| [Layout Examples](https://tianqi.name/jekyll-TeXt-theme/samples.html) | Examples for different layouts |
+##| Name | Description |
+##| --- | --- |
+##| [Home](https://tianqi.name/jekyll-TeXt-theme/test/) | Home page |
+##| [Archive](https://tianqi.name/jekyll-TeXt-theme/archive.html) | Archive page |
+##| [Layout Examples](https://tianqi.name/jekyll-TeXt-theme/samples.html) | Examples for different layouts |
 
 ## License
 
