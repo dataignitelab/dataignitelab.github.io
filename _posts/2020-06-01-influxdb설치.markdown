@@ -18,9 +18,6 @@ title:  "influxdb 설치 방법"
 ##### 사용자 생성
 ###### curl -XPOST "http://192.168.0.220:8086/query"  --data-urlencode "q=CREATE USER username WITH PASSWORD 'strongpassword' WITH ALL PRIVILEGES"
 
-##### 데이터베이스 조회 테스트
-###### curl -G "http://192.168.0.220:8086/query" -u username:password --data-urlencode "q=SHOW DATABASES"
-
 ##### 데이터베이스 생성
 ###### create database "데이터베이스 이름"
 ###### ex)create database whaleshark
