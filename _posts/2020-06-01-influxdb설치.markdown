@@ -3,34 +3,33 @@ layout: post
 title:  "influxdb 설치 방법"
 ---
 ##### ubuntu 18.04 환경에서 influxdb 설치 방법!!
-##### InfluxData 저장소를  /etc/apt/sources.list.d/influxdb.list 에 등록합니다.
-echo "deb https://repos.influxdata.com/ubuntu bionic stable" | sudo tee /etc/apt/sources.list.d/influxdb.
-##### GPG key 등록
-sudo curl -sL https://repos.influxdata.com/influxdb.key | sudo apt-key add -
+###### InfluxData 저장소를  /etc/apt/sources.list.d/influxdb.list 에 등록합니다.
+###### echo "deb https://repos.influxdata.com/ubuntu bionic stable" | sudo tee /etc/apt/sources.list.d/influxdb.
+###### GPG key 등록
+###### sudo curl -sL https://repos.influxdata.com/influxdb.key | sudo apt-key add -
 
 ##### apt index 업데이트, influxdb 설치
-sudo apt-get update
-sudo apt-get install influxdb
-sudo systemctl enable --now influxdb
+###### sudo apt-get update
+###### sudo apt-get install influxdb
+###### sudo systemctl enable --now influxdb
 ##### 방화벽 허용
-sudo ufw allow 8086/tcp
+###### sudo ufw allow 8086/tcp
 
 ##### 사용자 생성
-curl -XPOST "http://192.168.0.220:8086/query" \
-  --data-urlencode "q=CREATE USER username WITH PASSWORD 'strongpassword' WITH ALL PRIVILEGES"
+###### curl -XPOST "http://192.168.0.220:8086/query"  --data-urlencode "q=CREATE USER username WITH PASSWORD 'strongpassword' WITH ALL PRIVILEGES"
 
 ##### 데이터베이스 조회 테스트
-curl -G http://192.168.0.220:8086/query -u username:password --data-urlencode "q=SHOW DATABASES"
+###### curl -G http://192.168.0.220:8086/query -u username:password --data-urlencode "q=SHOW DATABASES"
 
 ##### 데이터베이스 생성
-create database "데이터베이스 이름"
-ex)create database whaleshark
+###### create database "데이터베이스 이름"
+###### ex)create database whaleshark
 
 ##### 데이터베이스 전환
-use "데이터베이스 이름"
-ex) use whaleshark
+###### use "데이터베이스 이름"
+###### ex) use whaleshark
 
 ##### 테이블 생성
-MySQL등의 RDBMS에서는 테이블을 별도로 만들지만, InfluxDB에서는 테이블이라는 용어 대신 'measurements'라는 개념을 사용합니다.
-measurement는 별도로 생성할 필요는 없기 때문에 곧바로 데이터를 insert 하면 measurement를 사용할 수 있다.
-ex) insert equip_status,sensor=temp value=2.2
+###### MySQL등의 RDBMS에서는 테이블을 별도로 만들지만, InfluxDB에서는 테이블이라는 용어 대신 'measurements'라는 개념을 사용합니다.
+###### measurement는 별도로 생성할 필요는 없기 때문에 곧바로 데이터를 insert 하면 measurement를 사용할 수 있다.
+###### ex) insert equip_status,sensor=temp value=2.2
