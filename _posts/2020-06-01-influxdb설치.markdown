@@ -16,7 +16,7 @@ title:  "influxdb 설치 방법"
 ###### sudo ufw allow 8086/tcp
 
 ##### 사용자 생성
-###### curl -XPOST "http://192.168.0.220:8086/query"  --data-urlencode "q=CREATE USER username WITH PASSWORD 'strongpassword' WITH ALL PRIVILEGES"
+###### curl "http://192.168.0.xxx:8086/query" --data-urlencode "q=CREATE USER username WITH PASSWORD 'passwd' WITH ALL PRIVILEGES"
 
 ##### 데이터베이스 생성
 ###### create database "데이터베이스 이름"
